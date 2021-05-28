@@ -62,7 +62,6 @@
 				4801F1DD26615F77007620C9 /* AppDelegate.swift */,
 				4801F1DF26615F77007620C9 /* SceneDelegate.swift */,
 				4801F1E626615F7A007620C9 /* Assets.xcassets */,
-				4801F1E826615F7A007620C9 /* LaunchScreen.storyboard */,
 				4801F1EB26615F7A007620C9 /* Info.plist */,
 			);
 			path = Atmo;
@@ -71,6 +70,7 @@
 		4801F1F226615FA5007620C9 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				4801F1E826615F7A007620C9 /* LaunchScreen.storyboard */,
 				4801F1E326615F77007620C9 /* Main.storyboard */,
 			);
 			path = Views;
