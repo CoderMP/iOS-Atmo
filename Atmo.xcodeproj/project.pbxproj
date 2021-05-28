@@ -13,6 +13,9 @@
 		4801F1E726615F7A007620C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4801F1E626615F7A007620C9 /* Assets.xcassets */; };
 		4801F1EA26615F7A007620C9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4801F1E826615F7A007620C9 /* LaunchScreen.storyboard */; };
 		4801F1F62661615F007620C9 /* AtmoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4801F1F52661615F007620C9 /* AtmoViewController.swift */; };
+		4801F1FA26616359007620C9 /* AtmoWeatherManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4801F1F926616359007620C9 /* AtmoWeatherManager.swift */; };
+		4801F1FD2661637E007620C9 /* AtmoWeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4801F1FC2661637E007620C9 /* AtmoWeatherModel.swift */; };
+		4801F2002661639F007620C9 /* AtmoWeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4801F1FF2661639F007620C9 /* AtmoWeatherData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		4801F1E926615F7A007620C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4801F1EB26615F7A007620C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4801F1F52661615F007620C9 /* AtmoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtmoViewController.swift; sourceTree = "<group>"; };
+		4801F1F926616359007620C9 /* AtmoWeatherManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtmoWeatherManager.swift; sourceTree = "<group>"; };
+		4801F1FC2661637E007620C9 /* AtmoWeatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtmoWeatherModel.swift; sourceTree = "<group>"; };
+		4801F1FF2661639F007620C9 /* AtmoWeatherData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtmoWeatherData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +85,9 @@
 		4801F1F326615FB5007620C9 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				4801F1F926616359007620C9 /* AtmoWeatherManager.swift */,
+				4801F1FC2661637E007620C9 /* AtmoWeatherModel.swift */,
+				4801F1FF2661639F007620C9 /* AtmoWeatherData.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -161,9 +170,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4801F1FD2661637E007620C9 /* AtmoWeatherModel.swift in Sources */,
 				4801F1DE26615F77007620C9 /* AppDelegate.swift in Sources */,
 				4801F1E026615F77007620C9 /* SceneDelegate.swift in Sources */,
+				4801F2002661639F007620C9 /* AtmoWeatherData.swift in Sources */,
 				4801F1F62661615F007620C9 /* AtmoViewController.swift in Sources */,
+				4801F1FA26616359007620C9 /* AtmoWeatherManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
