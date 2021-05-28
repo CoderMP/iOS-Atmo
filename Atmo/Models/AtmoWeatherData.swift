@@ -13,7 +13,7 @@ import Foundation
  *
  * @author Mark Philips
  */
-struct WeatherData: Codable {
+struct AtmoWeatherData: Codable {
     let name: String
     let main: Main
     let weather: [Weather]
