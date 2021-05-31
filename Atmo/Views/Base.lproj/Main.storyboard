@@ -143,6 +143,16 @@
                             <constraint firstItem="qGO-9a-7QD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="mdM-0e-iIJ"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="cityNameLabel" destination="F9J-MK-bYm" id="Ags-Dh-DED"/>
+                        <outlet property="feelsLikeLabel" destination="xhX-M5-H5t" id="Hbw-Em-UX9"/>
+                        <outlet property="humidityLabel" destination="2ZZ-qG-Uqm" id="Ru3-5y-A7H"/>
+                        <outlet property="locationButton" destination="0AC-b5-X35" id="344-c5-Rgx"/>
+                        <outlet property="searchTextField" destination="Vd7-sX-uTv" id="wfc-yB-xeh"/>
+                        <outlet property="temperatureLabel" destination="miQ-6m-AiE" id="5dc-eE-5kC"/>
+                        <outlet property="weatherConditionImage" destination="tXA-x4-aAz" id="ieM-9J-sWc"/>
+                        <outlet property="weatherConditionLabel" destination="kfU-Tz-G5z" id="kbh-Id-6br"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
