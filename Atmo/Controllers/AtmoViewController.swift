@@ -18,6 +18,7 @@ class AtmoViewController: UIViewController {
     @IBOutlet var feelsLikeLabel: UILabel!
     @IBOutlet var humidityLabel: UILabel!
     
+    var atmoWeatherManager = AtmoWeatherManager()
     var locationManager = CLLocationManager()
     
     override func viewDidLoad() {
@@ -32,6 +33,7 @@ class AtmoViewController: UIViewController {
         
         // Set the searchTextField & AtmoWeatherManager delegates
         searchTextField.delegate = self
+        atmoWeatherManager.delegate = self
     }
 }
 
@@ -92,7 +94,7 @@ extension AtmoViewController: UITextFieldDelegate {
     func textFieldDidEndEditing(_ textField: UITextField) {
         // Use the text from the UITextField to get the weather data for the desired city
         if let city = searchTextField.text {
-            // TODO: WeatherManager fetch method
+            atmoWeatherManager.fetchWeather(cityName: city)
         }
         
         UIView.transition(with: locationButton!, duration: 0.5, options: .transitionFlipFromRight, animations: {
@@ -101,6 +103,24 @@ extension AtmoViewController: UITextFieldDelegate {
         
         // Clear the text field
         searchTextField.text = ""
+    }
+}
+
+//MARK: - AtmoWeatherManagerDelegate
+extension AtmoViewController: AtmoWeatherManagerDelegate {
+    func didUpdateWeather(_ weatherManager: AtmoWeatherManager, weather: AtmoWeatherModel) {
+        DispatchQueue.main.async {
+            self.temperatureLabel.text = weather.temperatureString
+            self.weatherConditionImage.image = UIImage(systemName: weather.conditionName)
+            self.cityNameLabel.text = weather.cityName
+            self.weatherConditionLabel.text = weather.conditionDescription
+            self.feelsLikeLabel.text = "Feels Like: \(weather.feelsLike)°C"
+            self.humidityLabel.text = "Humidity: \(weather.humidity)%"
+        }
+    }
+    
+    func didFailWithError(error: Error) {
+        print(error)
     }
 }
 
@@ -137,7 +157,8 @@ extension AtmoViewController: CLLocationManagerDelegate {
             let lat = location.coordinate.latitude
             let long = location.coordinate.longitude
             
-            // TODO: Fetch the weather conditions for the current location
+            // Fetch the weather conditions for the current location
+            atmoWeatherManager.fetchWeather(latitude: lat, longitude: long)
             
             if let locationFill = UIImage(systemName: "location.fill") {
                 locationButton.setImage(locationFill, for: .normal)

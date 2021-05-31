@@ -28,19 +28,21 @@ struct AtmoWeatherModel {
     var conditionName: String {
         switch (conditionId) {
             case 200...232:
-                return "cloudy"
+                return "cloud.bolt"
             case 300...321:
-                return "cloudy with drizzle"
+                return "cloud.drizzle"
             case 500...531:
-                return "cloudy with rain"
+                return "cloud.rain"
             case 600...622:
-                return "snowing"
+                return "cloud.snow"
             case 700...781:
-                return "foggy"
+                return "cloud.fog"
             case 800:
-                return "Sunny"
+                return "sun.max"
+            case 801...804:
+                return "cloud"
             default:
-                return "cloudy"
+                return "cloud"
         }
     }
 }
